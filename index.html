@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>🌤️ Weather Dashboard</h1>
+            <p>Real-time weather information for any city</p>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name..."
+                autocomplete="off"
+            >
+
+            <button id="searchBtn">
+                Search
+            </button>
+
+        </section>
+
+        <!-- Loading -->
+        <div id="loading" class="loading hidden">
+            Loading weather data...
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="error hidden"></div>
+
+        <!-- Weather Dashboard -->
+        <main id="weatherDashboard" class="weather-dashboard hidden">
+
+            <!-- Location -->
+            <section class="location-card">
+
+                <div>
+                    <h2 id="cityName">--</h2>
+                    <p id="countryName">--</p>
+                </div>
+
+                <div class="weather-icon" id="weatherIcon">
+                    ☀️
+                </div>
+
+            </section>
+
+            <!-- Main Temperature -->
+            <section class="temperature-card">
+
+                <p id="weatherDescription">Clear Sky</p>
+
+                <h2>
+                    <span id="temperature">--</span>°C
+                </h2>
+
+                <p>
+                    Wind:
+                    <span id="windSpeed">--</span> km/h
+                </p>
+
+            </section>
+
+            <!-- Weather Details -->
+            <section class="details-grid">
+
+                <div class="detail-card">
+                    <div class="detail-icon">💧</div>
+                    <h3>Humidity</h3>
+                    <p>
+                        <span id="humidity">--</span>%
+                    </p>
+                </div>
+
+                <div class="detail-card">
+                    <div class="detail-icon">🌡️</div>
+                    <h3>Temperature</h3>
+                    <p>
+                        <span id="temperature2">--</span>°C
+                    </p>
+                </div>
+
+                <div class="detail-card">
+                    <div class="detail-icon">💨</div>
+                    <h3>Wind Speed</h3>
+                    <p>
+                        <span id="windSpeed2">--</span> km/h
+                    </p>
+                </div>
+
+                <div class="detail-card">
+                    <div class="detail-icon">🧭</div>
+                    <h3>Wind Direction</h3>
+                    <p>
+                        <span id="windDirection">--</span>°
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- API Information -->
+            <section class="api-info">
+
+                <p>
+                    Last updated:
+                    <span id="updatedTime">--</span>
+                </p>
+
+                <p>
+                    Data provided by Open-Meteo
+                </p>
+
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>Weather Dashboard </p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
